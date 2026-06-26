@@ -4,8 +4,14 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'dEG3nqPLK0Kklt9h^u8yuUgoYwAx!LyKa5sa8A^v29R@!Dea30'
-DEBUG = True
-ALLOWED_HOSTS = ['tapthatsaplan.com', 'www.tapthatsaplan.com', '127.0.0.1', 'localhost']
+DEBUG = False
+ALLOWED_HOSTS = [
+    'tapthatsaplan.com',
+    'www.tapthatsaplan.com',
+    '.onrender.com',
+    '127.0.0.1',
+    'localhost'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -23,6 +29,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',

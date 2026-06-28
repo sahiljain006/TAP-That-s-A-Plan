@@ -499,6 +499,65 @@
     .shimmer-btn:hover::after{left:120%}
 
     /* RESPONSIVE */
+    @media(hover:none) and (pointer:coarse){
+      .cursor-dot,.cursor-ring{display:none!important}
+      body{cursor:auto}
+    }
+
+    /* SMALL PHONES */
+    @media(max-width:480px){
+      .hero-section{height:100dvh;min-height:-webkit-fill-available}
+      .hero-title{font-size:2rem;letter-spacing:-1px}
+      .hero-title .accent::after{height:3px;bottom:3px}
+      .hero-left{padding:2rem 1.5rem!important}
+      .section-title{font-size:1.7rem;letter-spacing:-.5px}
+      .section-tag{font-size:9px;letter-spacing:3px}
+      .founder-card{position:relative!important;max-width:100%!important;bottom:auto!important;left:auto!important;margin-top:1.5rem}
+      .floating-cta{position:relative!important;top:auto!important;right:auto!important;display:inline-block;margin-top:1rem}
+      .about-img-wrap+.founder-card{margin-top:0}
+      .stat-number{font-size:2rem}
+      .stat-icon{font-size:1.3rem}
+      .gallery-item{flex:0 0 220px}
+      .gallery-item:hover{flex:0 0 220px}
+      .gallery-item img{height:300px}
+      .footer-section{padding:3rem 1.5rem!important}
+      div[id^=galleryStrip] .gallery-item:last-child{margin-right:0}
+      #navbar{padding-left:1rem!important;padding-right:1rem!important}
+      .tap-logo span:first-child{font-size:1.4rem}
+      .cta-nav-main{padding:.5rem 1rem!important;font-size:.65rem!important}
+      .admin-panel{padding:1.5rem 1rem!important}
+      .admin-panel .grid{gap:.75rem}
+      .event-card-img{height:220px}
+      .event-card-body{padding:1rem}
+      .event-card-title{font-size:1rem}
+      .testimonial-quote{font-size:3.5rem}
+      .hero-right .hero-glow-2{width:80%;height:50%}
+      .hero-glow{width:100%;height:60%}
+      #mobileMenu .mobile-link{font-size:1.8rem}
+    }
+
+    /* PHONES */
+    @media(max-width:640px){
+      .hero-section{min-height:100dvh;height:auto}
+      .hero-left{min-height:55vh;height:auto;padding:5rem 1.5rem 3rem!important}
+      .hero-right{height:45vh!important}
+      .hero-title{font-size:2.2rem}
+      .section-title{font-size:1.8rem}
+      .section-beige .py-24{padding-top:4rem;padding-bottom:4rem}
+      .section-dark .py-24{padding-top:4rem;padding-bottom:4rem}
+      .footer-section .grid{gap:2rem}
+      .footer-section .col-span-1:first-child{order:-1}
+      .event-card-img{height:240px}
+      .events-section .grid{gap:1rem}
+      #eventsGrid{gap:1rem}
+      .coming-soon-card{min-height:150px}
+      .cta-nav-main{font-size:.7rem;padding:.5rem 1.2rem!important}
+      .hero-label{font-size:9px;letter-spacing:3px}
+      .hero-label::before{width:20px}
+      #mobileMenu .mobile-link{font-size:2rem;letter-spacing:3px}
+    }
+
+    /* TABLETS */
     @media(max-width:768px){
       .stat-item:not(:last-child)::after{display:none}
       .hero-title{font-size:2.5rem;letter-spacing:-1px}
@@ -508,10 +567,29 @@
       .gallery-item img{height:360px}
       .testimonial-card{padding:2rem 1.5rem}
       .service-card{padding:2rem 1.5rem}
+      .hero-section{height:auto;min-height:100dvh}
+      .hero-left{min-height:50vh;padding:6rem 2rem 3rem!important}
+      .hero-right{height:40vh!important}
+      .founder-card{position:relative!important;max-width:100%!important;bottom:auto!important;left:auto!important;margin-top:1.5rem;transform:none!important}
+      .founder-card.reveal{transition-delay:0s!important}
+      .floating-cta{position:relative!important;top:auto!important;right:auto!important;display:inline-block;margin-top:1rem}
+      .floating-cta.reveal{transition-delay:0s!important}
+      .about-img-wrap img{height:300px!important}
+      .footer-section .grid{gap:2.5rem}
+      .event-card-img{height:280px}
+      .gallery-strip{gap:1rem}
+      .section-beige .px-6{padding-left:1.5rem;padding-right:1.5rem}
+      .section-dark .px-6{padding-left:1.5rem;padding-right:1.5rem}
     }
+
+    /* SMALL DESKTOPS / TABLET LANDSCAPE */
     @media(max-width:1024px){
       .stat-item:not(:last-child)::after{display:none}
+      .hero-left{width:100%!important}
+      .hero-right{width:100%!important}
+      .about-img-wrap img{height:400px}
     }
+
     html{scroll-behavior:smooth}
 
     /* LOADING SCREEN */
